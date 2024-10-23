@@ -1,0 +1,79 @@
+:root {
+    --gap: 2vh;
+}
+
+* {
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+.calculator {
+    height: 100vh;
+    width: auto;
+    aspect-ratio: 9/16;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    overflow: hidden;
+}
+
+.screen {
+    flex: 1;
+    color: white;
+    font-size: 7rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.keypad {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--gap);
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    gap: var(--gap);
+}
+
+button {
+    aspect-ratio: 1;
+    width: auto;
+    flex: 1;
+    font-size: 4rem;
+    border: none;
+    border-radius: 9999px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.orange {
+    background-color: orange;
+    color: white;
+}
+
+.dark-grey {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.zero {
+    flex: 2;
+    aspect-ratio: 2;
+    padding-left: var(--gap);
+    display: flex;
+    align-items: center;
+}

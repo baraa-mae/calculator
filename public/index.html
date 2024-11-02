@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../styles/output.css">
+</head>
+
+<body>
+    <!-- Main container -->
+    <div class="flex items-center justify-center h-screen overflow-hidden font-sans text-5xl font-bold bg-blue-300">
+        <!-- Calculator body -->
+        <div
+            class="rounded-3xl text-white flex flex-col items-center justify-evenly h-full gap-2 p-4 aspect-[10/16] bg-pink-300">
+            <!-- Display -->
+            <input class="bg-blue-400 size-full rounded-2xl" type="text" readonly>
+            <!-- Buttons -->
+            <div class="grid w-full grid-cols-4 gap-4">
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">C</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">()</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">%</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">&divide;</button>
+
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">7</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">8</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">9</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">&times;</button>
+
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">4</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">5</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">6</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">&minus;</button>
+
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">1</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">2</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">3</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">&plus;</button>
+
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">&lt;</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">0</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">.</button>
+                <button class="p-2 bg-pink-400 rounded-2xl aspect-square">&equals;</button>
+            </div>
+        </div>
+    </div>
+    <script src="../src/index.js"></script>
+</body>
+
+</html>

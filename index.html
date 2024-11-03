@@ -14,33 +14,34 @@
             <div
                 class="text-white rounded-3xl flex flex-col items-center justify-evenly h-5/6 gap-2 p-4 aspect-[10/16] bg-pink-200">
                 <!-- Display -->
-                <input id="display" class="p-6 bg-pink-300 text-7xl text-end rounded-2xl size-full" type="text" readonly>
+                <input id="display" class="p-6 bg-pink-400 text-7xl text-end rounded-2xl size-full" type="text"
+                    readonly>
                 <!-- Buttons -->
-                <div class="grid w-full grid-cols-4 gap-2">
-                    <button value="C" class="p-2 bg-pink-400 rounded-3xl aspect-square">C</button>
-                    <button value="()" class="p-2 bg-pink-400 rounded-3xl aspect-square">()</button>
-                    <button value="%" class="p-2 bg-pink-400 rounded-3xl aspect-square">%</button>
-                    <button value="&divide;" class="p-2 bg-pink-400 rounded-3xl aspect-square">&divide;</button>
+                <div class="grid w-full grid-cols-4 gap-3">
+                    <button onclick="clearDisplay();" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">C</button>
+                    <button value="()" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">()</button>
+                    <button value="%" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">%</button>
+                    <button onclick="updateDisplay('/')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&divide;</button>
 
-                    <button value="7" class="p-2 bg-pink-400 rounded-3xl aspect-square">7</button>
-                    <button value="8" class="p-2 bg-pink-400 rounded-3xl aspect-square">8</button>
-                    <button value="9" class="p-2 bg-pink-400 rounded-3xl aspect-square">9</button>
-                    <button value="&times;" class="p-2 bg-pink-400 rounded-3xl aspect-square">&times;</button>
+                    <button onclick="updateDisplay('7')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">7</button>
+                    <button onclick="updateDisplay('8')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">8</button>
+                    <button onclick="updateDisplay('9')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">9</button>
+                    <button onclick="updateDisplay('*')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&times;</button>
 
-                    <button value="4" class="p-2 bg-pink-400 rounded-3xl aspect-square">4</button>
-                    <button value="5" class="p-2 bg-pink-400 rounded-3xl aspect-square">5</button>
-                    <button value="6" class="p-2 bg-pink-400 rounded-3xl aspect-square">6</button>
-                    <button value="&minus;" class="p-2 bg-pink-400 rounded-3xl aspect-square">&minus;</button>
+                    <button onclick="updateDisplay('4')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">4</button>
+                    <button onclick="updateDisplay('5')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">5</button>
+                    <button onclick="updateDisplay('6')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">6</button>
+                    <button onclick="updateDisplay('-')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&minus;</button>
 
-                    <button value="1" class="p-2 bg-pink-400 rounded-3xl aspect-square">1</button>
-                    <button value="2" class="p-2 bg-pink-400 rounded-3xl aspect-square">2</button>
-                    <button value="3" class="p-2 bg-pink-400 rounded-3xl aspect-square">3</button>
-                    <button value="&plus;" class="p-2 bg-pink-400 rounded-3xl aspect-square">&plus;</button>
+                    <button onclick="updateDisplay('1')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">1</button>
+                    <button onclick="updateDisplay('2')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">2</button>
+                    <button onclick="updateDisplay('3')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">3</button>
+                    <button onclick="updateDisplay('+')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&plus;</button>
 
-                    <button value="&lt;" class="p-2 bg-pink-400 rounded-3xl aspect-square">&lt;</button>
-                    <button value="0" class="p-2 bg-pink-400 rounded-3xl aspect-square">0</button>
-                    <button value="&middot;" class="p-2 bg-pink-400 rounded-3xl aspect-square">&middot;</button>
-                    <button id="equals" class="p-2 bg-pink-400 rounded-3xl aspect-square">&equals;</button>
+                    <button onclick="backspace()" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&lt;</button>
+                    <button value="0" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">0</button>
+                    <button onclick="updateDisplay('&middot;')" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&middot;</button>
+                    <button onclick="calculate();" class="p-2 bg-pink-400 hover:bg-pink-300 active:bg-pink-100 rounded-3xl aspect-square">&equals;</button>
                 </div>
             </div>
         </div>
